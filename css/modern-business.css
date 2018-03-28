@@ -1,93 +1,83 @@
 /*!
- * Start Bootstrap - Modern Business (http://startbootstrap.com/)
- * Copyright 2013-2016 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ * Start Bootstrap - Modern Business (https://startbootstrap.com/template-overviews/modern-business)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
  */
 
-/* Global Styles */
-
-html,
 body {
-    height: 100%;
+  padding-top: 54px;
 }
 
-body {
-    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
 }
 
-.img-portfolio {
-    margin-bottom: 30px;
+.carousel-item {
+  height: 65vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-.img-hover:hover {
-    opacity: 0.8;
+/* josh hughes add this css 3/27/2018 */		
+.portfolio-item {
+  margin-bottom: 30px;
 }
-
-/* Home Page Carousel */
-
-header.carousel {
-    height: 50%;
+.logo img{display: block;
+		margin: auto;
+		width:50%;
+		}
+.scroll-up {
+	display:block;
+	margin: auto;
+	height: 100px;	
+	overflow: hidden;
+	position: relative;
+	width: 50%;
+	background: red;
+	color: white;
+	border: 1px solid blue;
 }
-
-header.carousel .item,
-header.carousel .item.active,
-header.carousel .carousel-inner {
-    height: 100%;
+.scroll-up > p {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	line-height: 50px;
+	text-align: center;
+	/* Starting position */
+	-moz-transform:translateY(100%);
+	-webkit-transform:translateY(100%);	
+	transform:translateY(100%);
+	/* Apply animation to this element */	
+	-moz-animation: scroll-up 5s linear infinite;
+	-webkit-animation: scroll-up 5s linear infinite;
+	animation: scroll-up 5s linear infinite;
 }
-
-header.carousel .fill {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
+/* Move it (define the animation) */
+@-moz-keyframes scroll-up {
+	0%   { -moz-transform: translateY(100%); }
+	100% { -moz-transform: translateY(-100%); }
 }
-
-/* 404 Page Styles */
-
-.error-404 {
-    font-size: 100px;
+@-webkit-keyframes scroll-up {
+	0%   { -webkit-transform: translateY(100%); }
+	100% { -webkit-transform: translateY(-100%); }
 }
-
-/* Pricing Page Styles */
-
-.price {
-    display: block;
-    font-size: 50px;
-    line-height: 50px;
+@keyframes scroll-up {
+	0%   { 
+		-moz-transform: translateY(100%); /* Browser bug fix */
+		-webkit-transform: translateY(100%); /* Browser bug fix */
+		transform: translateY(100%); 		
+	}
+	100% { 
+		-moz-transform: translateY(-100%); /* Browser bug fix */
+		-webkit-transform: translateY(-100%); /* Browser bug fix */
+		transform: translateY(-100%); 
+	}
 }
-
-.price sup {
-    top: -20px;
-    left: 2px;
-    font-size: 20px;
-}
-
-.period {
-    display: block;
-    font-style: italic;
-}
-
-/* Footer Styles */
-
-footer {
-    margin: 50px 0;
-}
-
-/* Responsive Styles */
-
-@media(max-width:991px) {
-    .customer-img,
-    .img-related {
-        margin-bottom: 30px;
-    }
-}
-
-@media(max-width:767px) {
-    .img-portfolio {
-        margin-bottom: 15px;
-    }
-
-    header.carousel .carousel {
-        height: 70%;
-    }
-}
+/* jh to here */
